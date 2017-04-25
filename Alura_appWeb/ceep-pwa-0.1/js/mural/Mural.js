@@ -68,13 +68,13 @@ const Mural = (function(_render, Filtro){
     
     
     login.on("login", ()=>{
-        cartoes = getMuralUsuario()
-        render()
+        cartoes = getMuralUsuario();
+        render();
     })
 
     login.on("logout", ()=> {
-        cartoes = []
-        render()
+        cartoes = [];
+        render();
     })
     
 

@@ -13,13 +13,11 @@ angular.module('alurapic').controller('FotosController',function($scope, $http){
     .error(function(erro){
         console.log(erro);
     });
-    
-    
-    
-    
-    
 });
 
+
+
+// http://wallpapercave.com/wp/JDaR3BA.jpg
 
 
     

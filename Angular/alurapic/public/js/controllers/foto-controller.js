@@ -17,7 +17,8 @@ angular.module('alurapic').controller('FotoController', function($scope, $http, 
     $scope.submeter = function(){
         if($scope.formulario.$valid){
             
-            if($routeParams.fotoId) {
+            // Alteração????
+            if($routeParams.fotoId) { 
                 $http.put('/v1/fotos/' + $scope.foto._id, $scope.foto)
                     .success(function() {
                         $scope.mensagem = 'Foto "' +$scope.foto.titulo +'" foi alterada com sucesso';
@@ -30,9 +31,8 @@ angular.module('alurapic').controller('FotoController', function($scope, $http, 
             } else { 
                 $http.post('/v1/fotos', $scope.foto)
                     .success(function() {
-                        alert("Item salvo");
-                        $scope.foto = {};
                         $scope.mensagem = 'Foto "'+$scope.foto.titulo+'" cadastrada com sucesso';
+                        $scope.foto = {};
                     })
                     .error(function(erro) {
                         console.log(erro);

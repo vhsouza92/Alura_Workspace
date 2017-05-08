@@ -32,6 +32,89 @@ angular.module('alurapic').controller('FotosController',function($scope, recurso
 
 
 
+// check foto::::
+
+
+// var app = angular.module('plunker', []);
+
+// app.controller('MainCtrl', function($scope, Utils) {
+//     $scope.test = function() {
+//         Utils.isImage($scope.source).then(function(result) {
+//             $scope.result = result;
+//         });
+//     };
+// });
+
+// app.factory('Utils', function($q) {
+//     return {
+//         isImage: function(src) {
+        
+//             var deferred = $q.defer();
+        
+//             var image = new Image();
+//             image.onerror = function() {
+//                 deferred.resolve(false);
+//             };
+//             image.onload = function() {z
+//                 deferred.resolve(true);
+//             };
+//             image.src = src;
+        
+//             return deferred.promise;
+//         }
+//     };
+// });
+
+///////////////////////////////////////////////////////////////////////////////
+
+// <!DOCTYPE html>
+// <html ng-app="plunker">
+
+// <head>
+//     <meta charset="utf-8" />
+//     <title>AngularJS Plunker</title>
+//     <script>
+//         document.write('<base href="' + document.location + '" />');
+//     </script>
+//     <link rel="stylesheet" href="style.css" />
+//     <script data-require="angular.js@1.2.x" src="http://code.angularjs.org/1.2.14/angular.js" data-semver="1.2.14"></script>
+//     <script src="app.js"></script>
+// </head>
+
+// <body ng-controller="MainCtrl">
+    
+//     Sourse to test: <input type="text" ng-model="source" /> <button ng-click="test()">Check</button>
+//     <div>Result: {{result}}</div>
+    
+// </body>
+
+// </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // http://wallpapercave.com/wp/JDaR3BA.jpg
 
 

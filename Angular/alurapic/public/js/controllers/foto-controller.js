@@ -18,11 +18,14 @@ angular.module('alurapic').controller('FotoController', function($scope, recurso
             cadastroDeFotos.cadastrar($scope.foto)
             .then(function(dados){
                 $scope.mensagem = dados.mensagem;
-                if(dados.incluido) $scope.foto = {};    
+                if(dados.incluido) {
+                    $scope.foto = {};
+                    $scope.focado = true;
+                }
                            
             }).catch(function(erro){
                 $scope.mensagem = erro.mensagem;
-            })
+            });
         }
     }; 
 })

@@ -7,15 +7,18 @@ angular.module('meusServicos', ['ngResource'])
         }
     });
 })
-.factory('cadastroDeFotos',function(recursoFoto, $q){
+.factory('cadastroDeFotos',function(recursoFoto, $q, $rootScope){
     
     var servico = {};
     
     servico.cadastrar = function(foto){
         return $q(function(resolve, reject){
+            
+            var evento = "fotoCadastrada"
             // aleração
             if(foto._id){
                 recursoFoto.update({fotoId: foto._id}, foto, function(){
+                    $rootScope.$broadcast(evento);
                     resolve({
                         mensagem: 'Foto "' +foto.titulo+ '" foi alterada com sucesso.'
                         ,incluido: false
@@ -30,6 +33,7 @@ angular.module('meusServicos', ['ngResource'])
             // Inclusao
             }else{
                 recursoFoto.save(foto,function(){
+                    $rootScope.$broadcast(evento);
                     resolve({
                         mensagem: 'Foto "' +foto.titulo+ '" foi incluída com sucesso.'
                         ,incluido: true

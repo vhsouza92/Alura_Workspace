@@ -14,14 +14,13 @@ angular.module('alurapic').controller('FotoController', function($scope, recurso
     
     $scope.submeter = function(){
         if($scope.formulario.$valid){
-           
-            cadastroDeFotos.cadastrar($scope.foto)
+           cadastroDeFotos.cadastrar($scope.foto)
             .then(function(dados){
                 $scope.mensagem = dados.mensagem;
                 if(dados.incluido) {
                     $scope.foto = {};
-                    $scope.focado = true;
                 }
+                $scope.focado = true;
                            
             }).catch(function(erro){
                 $scope.mensagem = erro.mensagem;

@@ -17,6 +17,7 @@
     </div><!--fim col-md-12-->                
 </div><!--fim row-->
             
+
 <div class="row">
     <meu-painel class="col-md-2 painel-animado" ng-repeat="foto in fotos | filter: filtro" titulo="{{foto.titulo}}">
         <minha-foto url="{{foto.url}}" titulo="{{foto.titulo}}"></minha-foto>
@@ -24,4 +25,5 @@
         <meu-botao-perigo acao="remover(foto)" nome="Remover"></meu-botao-perigo>
     </meu-painel><!-- fim meu-painel-->
 </div> 
+
 <meus-titulos></meus-titulos>

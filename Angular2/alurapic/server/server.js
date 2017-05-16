@@ -6,3 +6,4 @@ http.createServer(app).listen(process.env.PORT, process.env.IP);
 
 console.log("Servidor escutando na porta:"+ process.env.PORT);
 console.log("IP: "+ process.env.IP);
+
